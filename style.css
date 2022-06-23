@@ -43,13 +43,15 @@ ul.header__nav__list > li {
 
 .content {
     display: flex;
+    flex-wrap: wrap;
     margin: 1rem;
 }
 
 .content__card {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    margin: 0 1rem;
+    margin: 2rem 1rem;
     max-width: 200px;
     background-color: white;
     border-radius: 5px;
@@ -71,5 +73,51 @@ ul.header__nav__list > li {
 
 .content__card__bottom {
     padding: 0.5rem;
+}
+
+.content_bio {
+    display: flex;
+}
+
+.content_bio audio::-webkit-media-controls-panel {
+    background: lightblue;
+}
+
+.content_bio__video {
+    width: 100%;
+}
+
+.popup {
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.overlay--hide {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 

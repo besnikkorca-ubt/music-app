@@ -17,16 +17,33 @@
         <div class="header__nav">
             <nav>
                 <ul class="header__nav__list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/contact-us">Contact Us</a></li>
-                    <li><a href="/discover-music">Discover music</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="discover-music.html">Discover music</a></li>
                 </ul>
             </nav>
         </div>
         
     </div>
+    <div class="game">
+        <button onclick="showGame()">Toggle game</button>
+        <canvas id="drawBoard" class="hide" width="800" height="600"></canvas>
+    </div>
     <div class="content">
     </div>
+    <script>
+        function showGame() {
+            var canvas = document.querySelector('#drawBoard');
+
+            if (canvas.classList.contains('hide')) {
+                document.querySelector('#drawBoard').classList.remove('hide')
+            } else {
+                document.querySelector('#drawBoard').classList.add('hide')
+            }
+
+        }
+    </script>
     <script src="./assets/js/singer.js"></script>
+    <script src="./assets/js/tennis.js"></script>
 </body>
 </html>
